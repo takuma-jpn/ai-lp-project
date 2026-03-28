@@ -5,3 +5,13 @@ dist/
 .DS_Store
 *.log
 .vite/
+
+# 画像ファイル（バナー生成物）
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# 生成進捗・一時ファイル
+*_progress.json
+*_stdout.log
