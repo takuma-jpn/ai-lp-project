@@ -15,11 +15,14 @@ from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
+load_dotenv(dotenv_path=Path("/Users/takuma/.env"))
+
 # ── 設定 ──────────────────────────────────────────────
-API_KEY      = os.environ.get("GEMINI_API_KEY", "AIzaSyAXS5lYsFLny3JqA3-wfZOGlgO72vtkdHs")
+API_KEY      = os.environ.get("GEMINI_API_KEY", "")
 PROMPT_MODEL = "gemini-2.0-flash"
 IMAGE_MODEL  = "gemini-3.1-flash-image-preview"
 OUTPUT_DIR   = Path("/Users/takuma/workspace/AI-Marketing/banner-gemini31")
